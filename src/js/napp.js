@@ -23,11 +23,11 @@ App = {
   },
 
   initContract: function() {
-    $.getJSON("Dice.json", function(dice) {
+    $.getJSON("Game.json", function(game) {
       // Instantiate a new truffle contract from the artifact
-      App.contracts.Dice = TruffleContract(dice);
+      App.contracts.Game = TruffleContract(game);
       // Connect provider to interact with contract
-      App.contracts.Dice.setProvider(App.web3Provider);
+      App.contracts.Game.setProvider(App.web3Provider);
 
       App.listenForEvents();
 
@@ -37,7 +37,7 @@ App = {
 
   // Listen for events emitted from the contract
   listenForEvents: function() {
-    App.contracts.Dice.deployed().then(function(instance) {
+    App.contracts.Game.deployed().then(function(instance) {
       // Restart Chrome if you are unable to receive this event
       // This is a known issue with Metamask
       // https://github.com/MetaMask/metamask-extension/issues/2393
@@ -67,7 +67,7 @@ App = {
     });
 
     // Load contract data
-    App.contracts.Dice.deployed().then(function(instance) {
+    App.contracts.Game.deployed().then(function(instance) {
       gameInstance = instance;
       return gameInstance.isBetSet();
     }).then(function(isBetSet) {
@@ -83,7 +83,7 @@ App = {
   },
 
    roll : function(){
-    App.contracts.Dice.deployed().then(function(instance) {
+    App.contracts.Game.deployed().then(function(instance) {
       return instance.roll({ from: App.account });
     }).then(function(result) {
       //set bet value
@@ -103,7 +103,7 @@ App = {
 
    getNewBet: function() {
     $("#result").text("");
-    App.contracts.Dice.deployed().then(function(instance) {
+    App.contracts.Game.deployed().then(function(instance) {
       return instance.getNewbet({ from: App.account });
     }).then(function(result) {
       //set bet value

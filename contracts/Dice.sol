@@ -4,11 +4,11 @@ contract Dice{
 
 	struct Dice{
 		uint8  currentBet;
-		bool  isBetSet; //default value is false
+		bool  isBetSet; //default value is false	
 		uint8  destiny;
 	}
 
-	mapping(address => Dice) private bets;
+	mapping(address => Dice) public bets;
 
 	uint8 public randomFactor;
 
@@ -18,6 +18,10 @@ contract Dice{
 
 	constructor() public{
 		randomFactor = 10;
+	}
+
+	function isBetSet() public view returns(bool){
+		return bets[msg.sender].isBetSet;
 	}
 
 	function getNewbet() public returns(uint8){

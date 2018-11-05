@@ -29,7 +29,7 @@ contract Dice{
 		bets[msg.sender].isBetSet = true;
 		bets[msg.sender].currentBet = random();
 		randomFactor += bets[msg.sender].currentBet;
-		emit NewBetIsSet(msg.sender, bets[msg.sender].currentBet);
+		emit NewBetIsSet(msg.sender,bets[msg.sender].currentBet);
 		return bets[msg.sender].currentBet;
 	}
 

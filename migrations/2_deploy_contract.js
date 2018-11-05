@@ -1,5 +1,5 @@
-var Game = artifacts.require("./Game.sol");
+var Dice = artifacts.require("./Dice.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(Game);
+  deployer.deploy(Dice);
 };

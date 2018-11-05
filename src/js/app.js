@@ -92,7 +92,6 @@ App = {
         message.text('Bet is Set, Roll the Dice')
       }else{
       message.text('Set New Bet');
-      $("#result").text("");
     }
     }).catch(function(error) {
       console.warn(error);

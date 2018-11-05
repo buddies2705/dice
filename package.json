@@ -6,6 +6,7 @@
     "test": "test"
   },
   "scripts": {
+    "start": "npm run test",
     "dev": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,7 +16,8 @@
     "lite-server": "^2.3.0"
   },
   "dependencies": {
-    "npm-check-updates": "^2.14.2"
+    "npm-check-updates": "^2.14.2",
+    "truffle-hdwallet-provider": "0.0.6"
   },
   "description": ""
 }

@@ -2,13 +2,13 @@ pragma solidity ^0.4.24;
 
 contract Dice{
 
-	struct Dice{
+	struct Bet{
 		uint8  currentBet;
 		bool  isBetSet; //default value is false	
 		uint8  destiny;
 	}
 
-	mapping(address => Dice) public bets;
+	mapping(address => Bet) public bets;
 
 	uint8 public randomFactor;
 

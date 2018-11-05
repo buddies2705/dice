@@ -12,7 +12,7 @@ contract Dice{
 
 	uint8 private randomFactor;
 
-	event NewBetIsSet(uint8 currentBet);
+	event NewBetIsSet(address bidder , uint8 currentBet);
 
 	event GameResult(address bidder, uint8 currentBet , uint8 destiny);
 
@@ -29,7 +29,7 @@ contract Dice{
 		bets[msg.sender].isBetSet = true;
 		bets[msg.sender].currentBet = random();
 		randomFactor += bets[msg.sender].currentBet;
-		emit NewBetIsSet(bets[msg.sender].currentBet);
+		emit NewBetIsSet(msg.sender, bets[msg.sender].currentBet);
 		return bets[msg.sender].currentBet;
 	}
 

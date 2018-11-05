@@ -18,7 +18,9 @@
   "dependencies": {
     "npm-check-updates": "^2.14.2",
     "truffle-hdwallet-provider": "0.0.6",
-    "truffle": "^4.0.6"
+    "truffle": "^4.0.6",
+    "lite-server": "^2.3.0"
+
   },
   "description": ""
 }

@@ -8,9 +8,9 @@ contract Dice{
 		uint8  destiny;
 	}
 
-	mapping(address => Bet) public bets;
+	mapping(address => Bet) private bets;
 
-	uint8 public randomFactor;
+	uint8 private randomFactor;
 
 	event NewBetIsSet(uint8 currentBet);
 

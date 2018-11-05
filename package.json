@@ -16,11 +16,11 @@
     "lite-server": "^2.3.0"
   },
   "dependencies": {
+    "browser-sync": "^2.26.3",
+    "lite-server": "^2.3.0",
     "npm-check-updates": "^2.14.2",
-    "truffle-hdwallet-provider": "0.0.6",
     "truffle": "^4.0.6",
-    "lite-server": "^2.3.0"
-
+    "truffle-hdwallet-provider": "0.0.6"
   },
   "description": ""
 }
